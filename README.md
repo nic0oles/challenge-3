@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Projeto de Vídeos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação para gerenciar vídeos, com funcionalidades para listar vídeos, adicionar novos vídeos, editar vídeos e excluir vídeos. A aplicação é construída com React para o frontend e utiliza um servidor JSON simulado para armazenar os dados dos vídeos.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Exibição de vídeos em uma lista com categorias.
+- Adição de novos vídeos.
+- Edição e exclusão de vídeos existentes.
+- Modal para editar vídeos.
+- Navegação entre as páginas da aplicação com React Router.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router
+- JSON Server
+- CSS para estilização
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pré-requisitos
 
-### `npm test`
+Antes de rodar o projeto, você precisará ter o *Node.js* e o *npm* (ou *yarn*) instalados. Caso não tenha, instale-os através do [site oficial do Node.js](https://nodejs.org/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Rodando o Frontend (React)
 
-### `npm run build`
+Para rodar o frontend, siga as etapas abaixo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   bash
+   git clone https://github.com/nic0oles/challenge-3.git
+   cd challenge-3
+   
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Instale as dependências:
 
-### `npm run eject`
+   Se estiver usando *npm*:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   bash
+   npm install
+   
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Ou, se estiver usando *yarn*:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   bash
+   yarn install
+   
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Inicie o servidor de desenvolvimento:
 
-## Learn More
+   Se estiver usando *npm*:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   bash
+   npm start
+   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Ou, se estiver usando *yarn*:
 
-### Code Splitting
+   bash
+   yarn start
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Isso abrirá o frontend React no navegador, normalmente acessível em http://localhost:3000.
 
-### Analyzing the Bundle Size
+### 2. Rodando o Servidor JSON
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Este projeto usa o *JSON Server* para simular um banco de dados. Para rodá-lo, siga as etapas abaixo:
 
-### Making a Progressive Web App
+1. Se você ainda não tiver o *JSON Server* instalado, instale-o globalmente:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   bash
+   npm install -g json-server
+   
 
-### Advanced Configuration
+2. No diretório do projeto, crie um arquivo db.json com a seguinte estrutura para simular os dados dos vídeos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   json
+   {
+     "videos": [],
+     "categories": [
+       { "id": 1, "name": "Frontend" },
+       { "id": 2, "name": "Backend" },
+       { "id": 3, "name": "Mobile" }
+     ]
+   }
+   
 
-### Deployment
+3. Inicie o servidor JSON com o seguinte comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   bash
+   json-server --watch db.json --port 3001
+   
 
-### `npm run build` fails to minify
+   Isso fará com que o servidor JSON fique disponível em http://localhost:3001, e ele simulará uma API REST para os vídeos e categorias.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 3. Observação sobre a Funcionalidade de Edição
+
+A funcionalidade de *edição de vídeos* está funcionando, mas apresenta um pequeno problema em relação à responsividade do botão "Salvar". Atualmente:
+
+- O vídeo é editado corretamente no banco de dados quando o botão "Salvar" é clicado.
+- Contudo, a página precisa ser recarregada manualmente para visualizar as mudanças feitas.
