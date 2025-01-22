@@ -1,0 +1,59 @@
+.video-card {
+  width: 250px; /* Reduz o tamanho do card */
+  margin: 10px; /* Espaço entre os cards */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-card img {
+  width: 100%;
+  height: 140px; /* Altura ajustada */
+  object-fit: cover;
+}
+
+.video-card h3 {
+  font-size: 16px;
+  margin: 10px;
+  color: #333;
+}
+
+.video-card p {
+  font-size: 14px;
+  margin: 10px;
+  color: #666;
+}
+
+.video-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.edit-button,
+.delete-button {
+  font-size: 12px; /* Botões menores */
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button:hover {
+  background-color: #e31e14;
+}

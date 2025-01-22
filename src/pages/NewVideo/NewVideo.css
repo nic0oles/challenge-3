@@ -1,0 +1,31 @@
+.new-video {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.new-video form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-video input,
+.new-video select,
+.new-video textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.new-video button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.new-video button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.video-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.video-highlight img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.video-highlight h2 {
+  margin-top: 1rem;
+  color: #00b5ff;
+}
+
+.cards-section {
+  margin-bottom: 2rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #222222;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #222222;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  flex: 1;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.card-buttons button {
+  background-color: #00b5ff;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-buttons button:hover {
+  background-color: #008ccc;
+}
